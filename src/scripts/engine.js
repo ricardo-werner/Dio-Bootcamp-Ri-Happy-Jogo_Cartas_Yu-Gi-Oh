@@ -21,8 +21,8 @@ const state = {
 };
 
 const playerSides = {
-  player1: "player-field-card",
-  computer: "computer-field-card",
+  player1: "player-cards",
+  computer: "computer-cards",
 };
 
 const pathImages = './src/assets/icons/';
@@ -61,9 +61,9 @@ async function getRandomCardId() {
 
 async function createCardImage(idCard, fieldSide) {
   const cardImage = document.createElement('img');
-  cardImage.setAttribute(height, '100px');
+  cardImage.setAttribute("height", '100px');
   cardImage.setAttribute("src", "./src/assets/icons/card-back.png");
-  cqrdImage.setAttribute("data-id", idCard);
+  cardImage.setAttribute("data-id", idCard);
   cardImage.classList.add("card");
 
   if (fieldSide === playerSides.player1) {
@@ -83,10 +83,10 @@ async function createCardImage(idCard, fieldSide) {
 
 async function drawCards(cardNumbers, fieldSide) {
     for (let i = 0; i < cardNumbers; i++) {
-        const randomCard = await getRandomCardId();
-        const cardImagem = await createCardImagem(randomCard, fieldSide);
+        const randomIdCard = await getRandomCardId();
+        const cardImage = await createCardImage(randomIdCard, fieldSide);
 
-        document.getElementById(fieldSide).appendChild(cardImagem);
+        document.getElementById(fieldSide).appendChild(cardImage);
   }
 }
 
@@ -95,8 +95,8 @@ async function drawCards(cardNumbers, fieldSide) {
 
 
 function initial() {
-    drawCards(5, "playerSides.player1");
-    drawCards(5, "playerSides.computer");
+    drawCards(5, playerSides.player1);
+    drawCards(5, playerSides.computer);
 }
 
 initial();
