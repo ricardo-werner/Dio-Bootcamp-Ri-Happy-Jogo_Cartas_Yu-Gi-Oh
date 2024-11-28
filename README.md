@@ -73,7 +73,7 @@ O desafio deste projeto foi desenvolver uma Pokédex interativa, aplicando os co
 | Item  | Descrição                                                                       |
 |-------|---------------------------------------------------------------------------------|
 |  1    | A página deve ser desenvolvida em HTML, CSS e Javascript                        |
-|  1.1  | Base de design: https://www.figma.com/community/file/979132880663340794         |
+|  1.1  | Base de design: https://www.figma.com/community/file/1400417262485387501         |
 |  2    | Modelagem do layout, formatos, tipografias, cores e organização livre.          |
 |  2.1  | Opcional: Modelagem de modo livre.                                              |
 |  3    | A página deve consumir a api POKEAPI                                            |
