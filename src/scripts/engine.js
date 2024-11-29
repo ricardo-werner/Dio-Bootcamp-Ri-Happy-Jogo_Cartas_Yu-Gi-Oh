@@ -1,38 +1,46 @@
-// Seleciona os elementos necessários
-const user = document.getElementById("player-input");
-const btnSubmit = document.getElementById("btn-submit");
-const inputContainer = document.getElementById("input-container"); // Container do input e botão
-const playerNameDisplay = document.getElementById("player-label"); // Exibição do nome no Player 1
-const gameStartMessage = document.getElementById("game-start-message"); // Mensagem de início do jogo
+// Variáveis globais
+let isGameStarted = false;
 
-// Função para obter e exibir o nome do jogador
-function playerName(user) {
-  const playerName = user.value.trim(); // Obtém o valor do input e remove espaços extras
-  return playerName;
-}
+// Seleção de elementos
+const inputContainer = document.getElementById("container-input"); // Container de entrada
+const user = document.getElementById("player-input"); // Input do jogador
+const btnSubmit = document.getElementById("btn-submit"); // Botão enviar
+const playerNameDisplay = document.getElementById("player-label"); // Exibição do nome do jogador
+const gameStartMessage = document.getElementById("game-start-message"); // Mensagem inicial
+const gameInterface = document.querySelector(".container__right"); // Container do duelo do jogo
 
-// Evento para o botão "Enviar"
+// Evento do botão "Enviar"
 btnSubmit.addEventListener("click", () => {
-  const name = playerName(user); // Chama a função para obter o nome
+  const playerName = user.value.trim(); // Obtém o nome do jogador sem espaços extras
 
-  if (name) {
-    // Exibe o nome do jogador no campo "Player 1"
-    playerNameDisplay.textContent = name.toUpperCase();
+  if (playerName) {
+    // Exibe o nome do jogador na tela
+    playerNameDisplay.textContent = playerName.toUpperCase();
 
-    // Mostra a mensagem de boas-vindas
-    alert(gameStartMessage.textContent = `Bem-vindo, ${name}! O jogo começou!`);
+    // Inicia o áudio
+    const bgm = document.getElementById("bgm");
+    bgm.volume = 0.3;
+    bgm.play().catch((error) => {
+      console.error("Erro ao tentar reproduzir o áudio:", error);
+    });
 
-    // Esconde o input e o botão
+    // Exibe a mensagem de boas-vindas na interface, sem o uso de alert
+    alert(gameStartMessage.textContent = `Bem-vindo, ${playerName}! O jogo começou!`);
+
+    // Esconde o input-container
     inputContainer.style.display = "none";
+
+    // Remove o id "disable" da classe container__right
+    gameInterface.removeAttribute("id"); // Remove o id="disable"
+
+    // Atualiza o estado do jogo
+    isGameStarted = true;
   } else {
-    // Exibe um alerta caso o campo esteja vazio
     alert("Por favor, insira um nome antes de iniciar o jogo.");
   }
 });
 
-
-
-
+// Estado do jogo
 const state = {
   score: {
     playerScore: 0,
@@ -60,8 +68,10 @@ const state = {
   },
 };
 
+// Caminho das imagens
 const pathImages = "./src/assets/icons/";
 
+// Conteúdo das cartas
 const cardContent = [
   {
     id: 0,
@@ -113,11 +123,13 @@ const cardContent = [
   },
 ];
 
+// Função para obter um ID de carta aleatório
 async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardContent.length);
   return cardContent[randomIndex].id;
 }
 
+// Função para criar a imagem da carta
 async function createCardImage(idCard, fieldSide) {
   const cardImage = document.createElement("img");
   cardImage.setAttribute("height", "100px");
@@ -138,6 +150,7 @@ async function createCardImage(idCard, fieldSide) {
   return cardImage;
 }
 
+// Função para definir as cartas no campo
 async function setCardsField(cardId) {
   await removeAllCardsImages();
 
@@ -155,15 +168,18 @@ async function setCardsField(cardId) {
   await drawButtons(duelResult);
 }
 
+// Função para desenhar os botões com o resultado do duelo
 async function drawButtons(duelResult) {
   state.actions.button.innerText = duelResult.toUpperCase();
   state.actions.button.style.display = "block";
 }
 
+// Função para atualizar a pontuação
 async function updateScore() {
   state.score.scoreBox.innerText = `Win: ${state.score.playerScore} | Lose: ${state.score.computerScore}`;
 }
 
+// Função para verificar o resultado do duelo
 async function checkDuelResult(playerCardId, computerCardId) {
   let duelResult = "draw";
   //await playAudio(duelResult);
@@ -184,6 +200,7 @@ async function checkDuelResult(playerCardId, computerCardId) {
   return duelResult;
 }
 
+// Função para remover todas as imagens das cartas
 async function removeAllCardsImages() {
   let { computerBox, player1Box } = state.playerSides;
   let imageElement = computerBox.querySelectorAll("img");
@@ -200,12 +217,14 @@ async function removeAllCardsImages() {
   state.fieldCards.computer.src = "";
 }
 
+// Função para desenhar a carta selecionada
 async function drawSelectedCard(index) {
   state.cardSprites.avatar.src = cardContent[index].image;
   state.cardSprites.name.innerHTML = cardContent[index].name;
   state.cardSprites.type.innerHTML = "Attribute : " + cardContent[index].type;
 }
 
+// Função para desenhar as cartas
 async function drawCards(cardNumbers, fieldSide) {
   for (let i = 0; i < cardNumbers; i++) {
     const randomIdCard = await getRandomCardId();
@@ -215,6 +234,7 @@ async function drawCards(cardNumbers, fieldSide) {
   }
 }
 
+// Função para resetar o duelo
 async function resetDuel() {
   state.cardSprites.avatar.src = "";
   state.cardSprites.name.innerHTML = "Selecione";
@@ -226,21 +246,22 @@ async function resetDuel() {
   initial();
 }
 
+// Função para tocar o áudio
 async function playAudio(status) {
   const audio = new Audio(`./src/assets/audios/${status}.wav`);
   audio.play();
 }
 
-async function initial() {
+
+// Função inicial
+function initial() {
   state.fieldCards.player.style.display = "none";
   state.fieldCards.computer.style.display = "none";
 
-  await drawCards(5, state.playerSides.player1);
-  await drawCards(5, state.playerSides.computer);
+  drawCards(5, state.playerSides.player1);
+  drawCards(5, state.playerSides.computer);
 
-  // const bgm = document.getElementById("bgm");
-  // bgm.play();
-  // bgm.volume = 0.1;
 }
 
+// Chama a função inicial para iniciar o jogo
 initial();
