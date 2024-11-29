@@ -57,14 +57,13 @@ a:hover {
   pointer-events: none; /* Desativa interações */
 }
 
-
 #player-input {
   height: 2rem;
   color: #000;
   margin: 0.5rem 0;
   padding: 0.8rem;
 }
-#player-input::placeholder{
+#player-input::placeholder {
   padding: 0.5rem;
 }
 
@@ -73,16 +72,12 @@ a:hover {
   color: #fff;
 }
 
-#game-start-message {
-  color: #fff;
-  font-size: 1.5rem;
-  margin: 1rem 0;
+#btn-submit {
+  color: #000;
+  padding: 0.5rem;
 }
 
-
-
-
-
-
-
-
+#btn-submit:hover {
+  color: #fff;
+  background-color: #000;
+}
