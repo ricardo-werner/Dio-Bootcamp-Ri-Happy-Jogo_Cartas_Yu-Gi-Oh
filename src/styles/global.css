@@ -150,11 +150,8 @@ a:hover {
 .card {
   transition: transform 0.2s;
   border-radius: 8px;
-  cursor: pointer;
-
 }
 
 .card:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
