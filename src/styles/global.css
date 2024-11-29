@@ -47,6 +47,17 @@ a:hover {
   height: 100vh;
 }
 
+.frame {
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+/* Estilo para a interface desativada */
+#disable {
+  pointer-events: none; /* Desativa interações */
+}
+
+
 #player-input {
   height: 2rem;
   color: #000;
@@ -67,6 +78,8 @@ a:hover {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
+
+
 
 
 
