@@ -21,7 +21,7 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
 
 ### 🎥 Deploy
 
-
+  https://ricardo-werner.github.io/Dio-Bootcamp-Ri-Happy-Jogo_Cartas_Yu-Gi-Oh/
 
 #### Tela da Página do Jogo YU-GI-OH em Ação
 <p align="center">
