@@ -33,11 +33,6 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
   <img width="480" src="./src/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
-#### Tela da Página com o Resultado do Duelo
-<p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result.PNG" alt="imagem da tela do resultado do Duelo">
-</p>
-
 #### Tela da pagina do Jogo YU-GI-OH WIN (Vendedor)
 <p align="center">
   <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
