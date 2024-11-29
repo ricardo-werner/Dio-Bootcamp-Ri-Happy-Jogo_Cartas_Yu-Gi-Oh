@@ -1,18 +1,13 @@
-# Dio-Bootcamp_Ri-Happy-Pokedex
+# Dio-Bootcamp_Ri-Happy-Jogo Yu-Gi-OH
 
-Este projeto é uma Pokédex interativa desenvolvida como parte do Dio Bootcamp Ri-Happy. O objetivo principal é explorar a lógica de programação em JavaScript para criar uma experiência dinâmica e divertida. A aplicação utiliza a PokéAPI para listar e exibir detalhes dos Pokémon, incluindo a possibilidade de buscar por nome e visualizar informações detalhadas em um modal. Este projeto combina manipulação de DOM, eventos e consumo de APIs para criar uma aplicação funcional e envolvente.
+Este projeto é um jogo criado e desenvolvido pelo instrutor da Dio Felipe Aguiar (O Felipão) e faz parte do Bootcamp Ri-Happy - Front-end do Zero. O objetivo principal é explorar a lógica de programação em JavaScript para criar uma experiência dinâmica e divertida. O jogo utiliza lógicas avançadas de JavaScript, como controle de estado (state) e arquivos JSON para inserção dinâmica dos cards na janela e no placar do jogo. Este projeto combina manipulação de DOM para criar uma aplicação funcional e envolvente.
 
-## Página de registro das informações sobre os Pokémons no mundo fictício da série
+## Página de registro das informações sobre o Jogo Yu-Gi-OH
 
 ### 📜 Sobre o Projeto
 
-O objetivo deste projeto é desenvolver uma página interativa para exibir informações dos Pokémon, utilizando dados fornecidos pela PokéAPI. O desafio consiste em criar uma aplicação dinâmica com as seguintes funcionalidades:
+Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki Takahashi, este projeto recria a essência de duelos estratégicos com cartas únicas e relações de vitória e derrota. Inspirado no famoso jogo que surgiu como parte do mangá lançado em 1996, o projeto homenageia o legado de um dos card games mais populares do mundo, combinando lógica, design e interatividade.
 
-- Listar os Pokémon dinamicamente com base nos dados da API.
-- Implementar um sistema de busca por nome, permitindo filtrar os Pokémon na lista.
-- Exibir detalhes de cada Pokémon selecionado em um modal interativo.
-- Navegar entre páginas utilizando paginação para exibir uma quantidade limitada de Pokémon por vez.
-- Proporcionar uma experiência envolvente, com uma interface intuitiva e responsiva.
 
 ### 🔗 Links Úteis
 
@@ -26,60 +21,57 @@ O objetivo deste projeto é desenvolver uma página interativa para exibir infor
 
 ### 🎥 Deploy
 
-https://ricardo-werner.github.io/Dio-Bootcamp_Ri-Happy-Pokedex/
 
-#### Tela da Página do Pokedex
+
+#### Tela da Página do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./assets/to_readme/tela_inicial.PNG" alt="imagem da tela da página do Pokedex"
+  <img width="480" src="./src/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
-#### Tela da Página com Resultado da lista de Pokémons
+#### Tela da Página com o Resultado do Duelo
 <p align="center">
-  <img width="480" src="./assets/to_readme/tela_resultado.PNG" alt="imagem da tela do resultado da página do Pokedex">
+  <img width="480" src="./src/to_readme/tela_duel_result.PNG" alt="imagem da tela do resultado do Duelo">
 </p>
 
-#### Tela da Página de detalhes do Pokémon
+#### Tela do código do Jogo YU-GI-OH WIN (Vendedor)
 <p align="center">
-  <img width="480" src="./assets/to_readme/tela_poke_detalhes.PNG" alt="imagem da tela dos detalhes do Pokémon">
+  <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
 </p>
 
-#### Tela da Página com o resultado da busca por Pokémon (apenas faz a busca pelos cards da lista)
+#### Tela do código do Jogo YU-GI-OH LOSE (Perdedor)
 <p align="center">
-  <img width="480" src="./assets/to_readme/tela_resultado_search.PNG" alt="imagem da tela de pesquisa do Pokémon">
+  <img width="480" src="./src/to_readme/tela_duel_result_lose.PNG" alt="imagem da tela do resultado do duelo - perdedor">
 </p>
 
-#### Tela do código do Pokedex
+#### Tela do código do Jogo YU-GI-OH DRAW (Empate)
 <p align="center">
-  <img width="480" src="./assets/to_readme/tela_codigos.PNG" alt="imagem dos códigos utilizados na programação da pagina do Pokedex">
+  <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - empate">
 </p>
 
-#### Tela do arquivo JSON da POKEAPI
+#### Tela do código do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./assets/to_readme/pokeApiJson.PNG" alt="imagem do arquivo json da pokeapi">
+  <img width="480" src="./src/to_readme/tela_duel_result.PNG" alt="imagem dos códigos utilizados na programação da do jogo YU-GI-OH">
+</p>
+
+#### Tela do arquivo JSON do YU-GI-OH
+<p align="center">
+  <img width="480" src="./src/to_readme/tela_json.PNG" alt="imagem do arquivo json do YU-GI-OH">
 </p>
 
 ### 🧩 Desafio
 
-O desafio deste projeto foi desenvolver uma Pokédex interativa, aplicando os conhecimentos adquiridos em JavaScript. O objetivo era criar uma aplicação dinâmica que consumisse a PokéAPI para exibir informações dos Pokémon, permitindo interação com o usuário por meio de:
+  O desafio deste projeto foi recriar o tabuleiro e a lógica de duelos do icônico universo de Yu-Gi-Oh!, desenvolvendo cartas únicas, relações estratégicas de vitória e derrota, e elementos visuais que tornam a experiência interativa e dinâmica.
 
-- Busca por nome para filtrar Pokémon na lista.
-- Exibição de detalhes em um modal ao selecionar um Pokémon.
-- Paginação para navegação entre os dados disponíveis.
-- Manipulação do DOM para criar e atualizar os elementos da interface dinamicamente.
-- O projeto destacou a importância de integrar consumo de API, manipulação de eventos e boas práticas de programação.
 
 ### 📝 Requisitos da Aplicação
 
 | Item  | Descrição                                                                       |
 |-------|---------------------------------------------------------------------------------|
 |  1    | A página deve ser desenvolvida em HTML, CSS e Javascript                        |
-|  1.1  | Base de design: https://www.figma.com/community/file/1400417262485387501         |
+|  1.1  | Base de design: https://www.figma.com/community/file/1400417262485387501        |
 |  2    | Modelagem do layout, formatos, tipografias, cores e organização livre.          |
-|  2.1  | Opcional: Modelagem de modo livre.                                              |
-|  3    | A página deve consumir a api POKEAPI                                            |
-|  4    | Lista dos Pokémons deve ser dinêmica                                            |
-|  5    | Adicionar uma forma de apresentar os detalhes extra dos Pokémons                |
-|  XX   | Adicionado busca dinâmica por Pokémon (desde que esteja na lista em tela)       |
+|  3    | Distribuição dos cards deve ser dinâmica                                        |
+|  4    | Adicionar funcionalidades para deixar o jogo mais interativo e imersivo         |
 
 
 ### 🚀 Plano do Projeto
@@ -103,28 +95,28 @@ No desenvolvimento desta página, foram aplicados os seguintes conceitos:
 
 ### 💡 Reflexões
 
-Desenvolver este projeto foi um marco significativo no meu aprendizado na programação, permitindo um aprofundamento prático nas técnicas de desenvolvimento web. Durante este desenvolvimento, pude iniciar o meu entendimento em JavaScript, explorando sua capacidade de adicionar interatividade e dinamismo à página. Além disso, este projeto reforçou minha habilidade em manipulação de dados, lógica de programação e integração com APIs, contribuindo para meu crescimento contínuo na jornada como desenvolvedor.
+Desenvolver este projeto representou uma evolução significativa no meu aprendizado em programação, permitindo-me aprender e aplicar conceitos mais avançados de JavaScript. Durante o processo, explorei suas capacidades para criar interatividade e dinâmicas que simulam os duelos do icônico jogo de cartas Yu-Gi-Oh!. Além disso, o projeto reforçou meu entendimento sobre manipulação de dados, lógica de programação e criação de relações estratégicas entre os elementos do jogo, contribuindo de forma contínua para o meu crescimento como desenvolvedor web.
 
 ### 📦 Como Executar o Projeto
 
 1. Clone o repositório:
    
-    git clone https://github.com/ricardo-werner/Dio-Bootcamp_Ri-Happy-Pokedex.git
+    git clone https://github.com/ricardo-werner/Dio-Bootcamp-Ri-Happy-Jogo_Cartas_Yu-Gi-Oh.git
 
 3. Abra o projeto no Visual Studio Code e ative o Go Live:
     
    <p align="center">
-     <img width="280" src="./assets/to_readme/GoLive.jpg" alt="Ativando o Go Live">
+     <img width="280" src="./src/to_readme/GoLive.jpg" alt="Ativando o Go Live">
    </p>
 
    <p align="center">
-     <img width="280" src="./assets/to_readme/GoLiveOn.jpg" alt="Go Live ativado">
+     <img width="280" src="./src/to_readme/GoLiveOn.jpg" alt="Go Live ativado">
    </p>
 
 4. Visualize o resultado na página web:
 
    <p align="center">
-     <img width="480" src="./assets/to_readme/telaWeb.PNG" alt="Resultado na Web">
+     <img width="480" src="./src/to_readme/telaWeb.PNG" alt="Resultado na Web">
    </p>
 
 
