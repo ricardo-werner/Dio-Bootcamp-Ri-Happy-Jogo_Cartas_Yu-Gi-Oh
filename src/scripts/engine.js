@@ -28,32 +28,58 @@ const state = {
 
 const pathImages = './src/assets/icons/';
 
-const cardContent =[
+const cardContent = [
   {
     id: 0,
     name: "Blue Eyes White Dragon",
     type: "Paper",
-    image: `${pathImages}dragon.png`,
-    winOf: [1],
-    loseOf: [2],
+    image: `${pathImages}dragon.jpg`,
+    winOf: [3, 4], // Vence Tyhone e Bezaubernde Nixe
+    loseOf: [1, 2, 5], // Perde para Dark Magician, Exodia, e Celtic Guardian
   },
   {
     id: 1,
     name: "Dark Magician",
     type: "Rock",
-    image: `${pathImages}magician.png`,
-    winOf: [1],
-    loseOf: [2],
+    image: `${pathImages}magician.jpg`,
+    winOf: [0, 4], // Vence Dragon e Bezaubernde Nixe
+    loseOf: [2, 3, 5], // Perde para Exodia, Tyhone, e Celtic Guardian
   },
   {
     id: 2,
     name: "Exodia",
     type: "Scissors",
-    image: `${pathImages}exodia.png`,
-    winOf: [0],
-    loseOf: [1],
+    image: `${pathImages}exodia.jpg`,
+    winOf: [0, 1, 3, 4, 5], // Vence todos
+    loseOf: [], // Não perde para ninguém
   },
-]
+  {
+    id: 3,
+    name: "Tyhone",
+    type: "Wind",
+    image: `${pathImages}tyhone.jpg`,
+    winOf: [1, 5], // Vence Dark Magician e Celtic Guardian
+    loseOf: [2, 4, 0], // Perde para Exodia, Bezaubernde Nixe, e Dragon
+  },
+  {
+    id: 4,
+    name: "Bezaubernde Nixe",
+    type: "Water",
+    image: `${pathImages}nixe.jpg`,
+    winOf: [3, 0], // Vence Tyhone e Dragon
+    loseOf: [1, 5, 2], // Perde para Dark Magician, Celtic Guardian, e Exodia
+  },
+  {
+    id: 5,
+    name: "Celtic Guardian",
+    type: "Earth",
+    image: `${pathImages}celtic_guardian.jpg`,
+    winOf: [0, 1, 4], // Vence Dragon, Dark Magician, e Bezaubernde Nixe
+    loseOf: [3, 2], // Perde para Tyhone e Exodia
+  },
+];
+
+
 
 async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardContent.length);
@@ -172,7 +198,9 @@ async function resetDuel() {
   state.fieldCards.player.style.display = "none";
   state.fieldCards.computer.style.display = "none";
 
-  initial();
+
+    initial();
+
 }
 
 async function playAudio(status) {
@@ -181,16 +209,16 @@ async function playAudio(status) {
 }
 
 
-function initial() {
+async function initial() {
   state.fieldCards.player.style.display = "none";
   state.fieldCards.computer.style.display = "none";
-  
-  drawCards(5, state.playerSides.player1);
-  drawCards(5, state.playerSides.computer);
-}
 
-const bgm = document.getElementById("bgm");
-bgm.play();
-bgm.volume = 0.1;
+  await drawCards(5, state.playerSides.player1);
+  await drawCards(5, state.playerSides.computer);
+
+  // const bgm = document.getElementById("bgm");
+  // bgm.play();
+  // bgm.volume = 0.1;
+}
 
 initial();
