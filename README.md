@@ -23,6 +23,11 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
 
 
 
+#### Tela da Página do Jogo YU-GI-OH em Ação
+<p align="center">
+  <img width="480" src="./src/to_readme/yu-gi-oh.gif" alt="gif animado da tela da página do jogo do YU-Gi-OH"
+</p>
+
 #### Tela da Página do Jogo YU-GI-OH
 <p align="center">
   <img width="480" src="./src/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
@@ -33,24 +38,24 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
   <img width="480" src="./src/to_readme/tela_duel_result.PNG" alt="imagem da tela do resultado do Duelo">
 </p>
 
-#### Tela do código do Jogo YU-GI-OH WIN (Vendedor)
+#### Tela da pagina do Jogo YU-GI-OH WIN (Vendedor)
 <p align="center">
   <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
 </p>
 
-#### Tela do código do Jogo YU-GI-OH LOSE (Perdedor)
+#### Tela da pagina do Jogo YU-GI-OH LOSE (Perdedor)
 <p align="center">
   <img width="480" src="./src/to_readme/tela_duel_result_lose.PNG" alt="imagem da tela do resultado do duelo - perdedor">
 </p>
 
-#### Tela do código do Jogo YU-GI-OH DRAW (Empate)
+#### Tela da pagina do Jogo YU-GI-OH DRAW (Empate)
 <p align="center">
   <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - empate">
 </p>
 
 #### Tela do código do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result.PNG" alt="imagem dos códigos utilizados na programação da do jogo YU-GI-OH">
+  <img width="480" src="./src/to_readme/tela_codigo.PNG" alt="imagem dos códigos utilizados na programação da do jogo YU-GI-OH">
 </p>
 
 #### Tela do arquivo JSON do YU-GI-OH
