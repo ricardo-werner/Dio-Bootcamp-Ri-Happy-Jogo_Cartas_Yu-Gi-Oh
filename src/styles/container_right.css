@@ -1,0 +1,18 @@
+.container__right {
+  width: 65%;
+}
+
+.versus-top,
+.versus-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.versus-bottom {
+  margin-top: 16px;
+}
+
+#next-duel {
+  display: none;
+}

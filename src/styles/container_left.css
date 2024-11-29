@@ -1,0 +1,27 @@
+.container__left {
+  width: 35%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container__left .menu_avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.score_box {
+  background-color: #fff;
+  padding: 20px 30px;
+  position: sticky;
+}
+
+.frame {
+  border: 3px solid #000;
+  border-radius: 5px;
+}
