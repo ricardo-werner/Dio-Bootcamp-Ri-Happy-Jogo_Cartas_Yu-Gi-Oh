@@ -33,7 +33,22 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
   <img width="480" src="./src/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
-#### Tela da pagina do Jogo YU-GI-OH WIN (Vendedor)
+#### Tela da Página do Jogo YU-GI-OH com Mensagem sem Usuário
+<p align="center">
+  <img width="480" src="./src/to_readme/tela_msg_inicial_vazia.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+</p>
+
+#### Tela da Página Inicial do Jogo YU-GI-OH
+<p align="center">
+  <img width="480" src="./src/to_readme/tela_inicial_inicio_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+</p>
+
+#### Tela da Página do Jogo YU-GI-OH Inicio do Jogo
+<p align="center">
+  <img width="480" src="./src/to_readme/tela_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+</p>
+
+#### Tela da pagina do Jogo YU-GI-OH WIN 
 <p align="center">
   <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
 </p>
@@ -45,7 +60,7 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
 
 #### Tela da pagina do Jogo YU-GI-OH DRAW (Empate)
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - empate">
+  <img width="480" src="./src/to_readme/tela_duel_result_draw.PNG" alt="imagem da tela do resultado do duelo - empate">
 </p>
 
 #### Tela do código do Jogo YU-GI-OH
