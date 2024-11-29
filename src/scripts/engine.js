@@ -182,8 +182,15 @@ async function playAudio(status) {
 
 
 function initial() {
-    drawCards(5, state.playerSides.player1);
-    drawCards(5, state.playerSides.computer);
+  state.fieldCards.player.style.display = "none";
+  state.fieldCards.computer.style.display = "none";
+  
+  drawCards(5, state.playerSides.player1);
+  drawCards(5, state.playerSides.computer);
 }
+
+const bgm = document.getElementById("bgm");
+bgm.play();
+bgm.volume = 0.1;
 
 initial();
