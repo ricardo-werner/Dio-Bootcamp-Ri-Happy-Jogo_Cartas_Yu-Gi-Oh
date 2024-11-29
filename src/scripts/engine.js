@@ -1,4 +1,38 @@
-// Initialize the game engine
+// Seleciona os elementos necessários
+const user = document.getElementById("player-input");
+const btnSubmit = document.getElementById("btn-submit");
+const inputContainer = document.getElementById("input-container"); // Container do input e botão
+const playerNameDisplay = document.getElementById("player-label"); // Exibição do nome no Player 1
+const gameStartMessage = document.getElementById("game-start-message"); // Mensagem de início do jogo
+
+// Função para obter e exibir o nome do jogador
+function playerName(user) {
+  const playerName = user.value.trim(); // Obtém o valor do input e remove espaços extras
+  return playerName;
+}
+
+// Evento para o botão "Enviar"
+btnSubmit.addEventListener("click", () => {
+  const name = playerName(user); // Chama a função para obter o nome
+
+  if (name) {
+    // Exibe o nome do jogador no campo "Player 1"
+    playerNameDisplay.textContent = name.toUpperCase();
+
+    // Mostra a mensagem de boas-vindas
+    alert(gameStartMessage.textContent = `Bem-vindo, ${name}! O jogo começou!`);
+
+    // Esconde o input e o botão
+    inputContainer.style.display = "none";
+  } else {
+    // Exibe um alerta caso o campo esteja vazio
+    alert("Por favor, insira um nome antes de iniciar o jogo.");
+  }
+});
+
+
+
+
 const state = {
   score: {
     playerScore: 0,
@@ -26,7 +60,7 @@ const state = {
   },
 };
 
-const pathImages = './src/assets/icons/';
+const pathImages = "./src/assets/icons/";
 
 const cardContent = [
   {
@@ -79,36 +113,32 @@ const cardContent = [
   },
 ];
 
-
-
 async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardContent.length);
   return cardContent[randomIndex].id;
 }
 
 async function createCardImage(idCard, fieldSide) {
-  const cardImage = document.createElement('img');
-  cardImage.setAttribute("height", '100px');
+  const cardImage = document.createElement("img");
+  cardImage.setAttribute("height", "100px");
   cardImage.setAttribute("src", "./src/assets/icons/card-back.png");
   cardImage.setAttribute("data-id", idCard);
   cardImage.classList.add("card");
 
   if (fieldSide === state.playerSides.player1) {
-    cardImage.addEventListener('mouseover', () => {
-    drawSelectedCard(idCard);
+    cardImage.addEventListener("mouseover", () => {
+      drawSelectedCard(idCard);
     });
 
-    cardImage.addEventListener('click', () => {
-      setCardsField(cardImage.getAttribute('data-id'));
-    }); 
-}
+    cardImage.addEventListener("click", () => {
+      setCardsField(cardImage.getAttribute("data-id"));
+    });
+  }
 
   return cardImage;
-
 }
 
-async function setCardsField(cardId){
-
+async function setCardsField(cardId) {
   await removeAllCardsImages();
 
   let computerCardId = await getRandomCardId();
@@ -125,27 +155,27 @@ async function setCardsField(cardId){
   await drawButtons(duelResult);
 }
 
-async function drawButtons(duelResult){
+async function drawButtons(duelResult) {
   state.actions.button.innerText = duelResult.toUpperCase();
   state.actions.button.style.display = "block";
-};
+}
 
-async function updateScore(){
+async function updateScore() {
   state.score.scoreBox.innerText = `Win: ${state.score.playerScore} | Lose: ${state.score.computerScore}`;
 }
 
-async function checkDuelResult(playerCardId, computerCardId){
+async function checkDuelResult(playerCardId, computerCardId) {
   let duelResult = "draw";
   //await playAudio(duelResult);
   let playerCard = cardContent[playerCardId];
 
-  if(playerCard.winOf.includes(computerCardId)){
+  if (playerCard.winOf.includes(computerCardId)) {
     duelResult = "win";
     await playAudio(duelResult);
     state.score.playerScore++;
   }
 
-  if(playerCard.loseOf.includes(computerCardId)){
+  if (playerCard.loseOf.includes(computerCardId)) {
     duelResult = "lose";
     await playAudio(duelResult);
     state.score.computerScore++;
@@ -154,8 +184,8 @@ async function checkDuelResult(playerCardId, computerCardId){
   return duelResult;
 }
 
-async function removeAllCardsImages(){
-  let { computerBox, player1Box} = state.playerSides;
+async function removeAllCardsImages() {
+  let { computerBox, player1Box } = state.playerSides;
   let imageElement = computerBox.querySelectorAll("img");
   imageElement.forEach((img) => {
     img.remove();
@@ -166,12 +196,9 @@ async function removeAllCardsImages(){
     img.remove();
   });
 
-
-
   state.fieldCards.player.src = "";
   state.fieldCards.computer.src = "";
 }
-
 
 async function drawSelectedCard(index) {
   state.cardSprites.avatar.src = cardContent[index].image;
@@ -179,16 +206,14 @@ async function drawSelectedCard(index) {
   state.cardSprites.type.innerHTML = "Attribute : " + cardContent[index].type;
 }
 
-
 async function drawCards(cardNumbers, fieldSide) {
-    for (let i = 0; i < cardNumbers; i++) {
-        const randomIdCard = await getRandomCardId();
-        const cardImage = await createCardImage(randomIdCard, fieldSide);
+  for (let i = 0; i < cardNumbers; i++) {
+    const randomIdCard = await getRandomCardId();
+    const cardImage = await createCardImage(randomIdCard, fieldSide);
 
-        document.getElementById(fieldSide).appendChild(cardImage);
+    document.getElementById(fieldSide).appendChild(cardImage);
   }
 }
-
 
 async function resetDuel() {
   state.cardSprites.avatar.src = "";
@@ -198,16 +223,13 @@ async function resetDuel() {
   state.fieldCards.player.style.display = "none";
   state.fieldCards.computer.style.display = "none";
 
-
-    initial();
-
+  initial();
 }
 
 async function playAudio(status) {
   const audio = new Audio(`./src/assets/audios/${status}.wav`);
   audio.play();
 }
-
 
 async function initial() {
   state.fieldCards.player.style.display = "none";
