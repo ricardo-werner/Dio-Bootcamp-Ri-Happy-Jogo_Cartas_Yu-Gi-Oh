@@ -3,13 +3,13 @@
 }
 
 .versus-top,
-.versus-bottom {
+.versus-botton {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.versus-bottom {
+.versus-botton {
   margin-top: 16px;
 }
 
