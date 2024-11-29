@@ -29,7 +29,14 @@
       </div>
 
       <div class="container">
-        <div class="container__left framed-golden-2">
+          <div class="container__left framed-golden-2">
+            <div id="input-container">
+              <label for="player-input">Nome do Jogador:</label>
+              <input type="text" id="player-input" placeholder="Digite seu nome..."></input>
+              <buttom id="btn-submit">Enviar</buttom>
+              <p id="game-start-message"></p>
+            </div>
+
           <div class="score_box frame">
             <span id="score_points">Win : 0 | Lose : 0</span>
           </div>
@@ -46,6 +53,7 @@
 
         <div class="container__right">
           <div class="card-box__container">
+            <span class="computer-label">Computer Player</span>
             <div id="computer-cards" class="card-box framed">
             </div>
             
@@ -77,6 +85,7 @@
 
             <div id="player-cards" class="card-box framed">
             </div>
+            <span id="player-label">Player 1</span>
           </div>
         </div>
       </div>
