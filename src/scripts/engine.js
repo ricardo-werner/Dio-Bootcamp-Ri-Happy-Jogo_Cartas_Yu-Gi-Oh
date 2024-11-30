@@ -4,7 +4,7 @@ let isGameStarted = false;
 // Seleção de elementos
 const inputContainer = document.getElementById("container-input"); // Container de entrada
 const user = document.getElementById("player-input"); // Input do jogador
-const btnSubmit = document.getElementById("btn-submit"); // Botão enviar
+const btnSubmit = document.getElementById("btn-submit"); // botão  enviar
 const playerNameDisplay = document.getElementById("player-label"); // Exibição do nome do jogador
 const gameStartMessage = document.getElementById("game-start-message"); // Mensagem inicial
 const gameInterface = document.querySelector(".container__right"); // Container do duelo do jogo
@@ -29,6 +29,7 @@ btnSubmit.addEventListener("click", () => {
 
     // Esconde o input-container
     inputContainer.style.display = "none";
+    console.log(inputContainer);
 
     // Remove o id "disable" da classe container__right
     gameInterface.removeAttribute("id"); // Remove o id="disable"
