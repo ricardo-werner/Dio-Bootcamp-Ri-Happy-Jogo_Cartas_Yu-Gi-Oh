@@ -25,52 +25,52 @@ Jogo de Cartas Interativo inspirado no universo de Yu-Gi-Oh!, criado por Kazuki 
 
 #### Tela da Página do Jogo YU-GI-OH em Ação
 <p align="center">
-  <img width="480" src="./src/to_readme/yu-gi-oh.gif" alt="gif animado da tela da página do jogo do YU-Gi-OH"
+  <img width="480" src="./src/assets/to_readme/yu-gi-oh.gif" alt="gif animado da tela da página do jogo do YU-Gi-OH"
 </p>
 
 #### Tela da Página do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+  <img width="480" src="./src/assets/to_readme/tela_inicial.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
 #### Tela da Página do Jogo YU-GI-OH com Mensagem sem Usuário
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_msg_inicial_vazia.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+  <img width="480" src="./src/assets/to_readme/tela_msg_inicial_vazia.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
 #### Tela da Página Inicial do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_inicial_inicio_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+  <img width="480" src="./src/assets/to_readme/tela_inicial_inicio_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
 #### Tela da Página do Jogo YU-GI-OH Inicio do Jogo
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
+  <img width="480" src="./src/assets/to_readme/tela_jogo.PNG" alt="imagem da tela da página do jogo do YU-Gi-OH"
 </p>
 
 #### Tela da pagina do Jogo YU-GI-OH WIN 
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
+  <img width="480" src="./src/assets/to_readme/tela_duel_result_win.PNG" alt="imagem da tela do resultado do duelo - vencedor">
 </p>
 
 #### Tela da pagina do Jogo YU-GI-OH LOSE (Perdedor)
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result_lose.PNG" alt="imagem da tela do resultado do duelo - perdedor">
+  <img width="480" src="./src/assets/to_readme/tela_duel_result_lose.PNG" alt="imagem da tela do resultado do duelo - perdedor">
 </p>
 
 #### Tela da pagina do Jogo YU-GI-OH DRAW (Empate)
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_duel_result_draw.PNG" alt="imagem da tela do resultado do duelo - empate">
+  <img width="480" src="./src/assets/to_readme/tela_duel_result_draw.PNG" alt="imagem da tela do resultado do duelo - empate">
 </p>
 
 #### Tela do código do Jogo YU-GI-OH
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_codigo.PNG" alt="imagem dos códigos utilizados na programação da do jogo YU-GI-OH">
+  <img width="480" src="./src/assets/to_readme/tela_codigo.PNG" alt="imagem dos códigos utilizados na programação da do jogo YU-GI-OH">
 </p>
 
 #### Tela do arquivo JSON do YU-GI-OH
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_json.PNG" alt="imagem do arquivo json do YU-GI-OH">
+  <img width="480" src="./src/assets/to_readme/tela_json.PNG" alt="imagem do arquivo json do YU-GI-OH">
 </p>
 
 ### 🧩 Desafio
@@ -121,17 +121,17 @@ Desenvolver este projeto representou uma evolução significativa no meu aprendi
 3. Abra o projeto no Visual Studio Code e ative o Go Live:
     
    <p align="center">
-     <img width="280" src="./src/to_readme/GoLive.jpg" alt="Ativando o Go Live">
+     <img width="280" src="./src/assets/to_readme/GoLive.jpg" alt="Ativando o Go Live">
    </p>
 
    <p align="center">
-     <img width="280" src="./src/to_readme/GoLiveOn.jpg" alt="Go Live ativado">
+     <img width="280" src="./src/assets/to_readme/GoLiveOn.jpg" alt="Go Live ativado">
    </p>
 
 4. Visualize o resultado na página web:
 
    <p align="center">
-     <img width="480" src="./src/to_readme/telaWeb.PNG" alt="Resultado na Web">
+     <img width="480" src="./src/assets/to_readme/telaWeb.PNG" alt="Resultado na Web">
    </p>
 
 
